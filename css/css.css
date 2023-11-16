@@ -1,0 +1,526 @@
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    padding: 0 0 0 0;
+    margin: 0;
+    font-family: "Noto Sans TC", sans-serif;
+}
+nav.computer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgb(250, 250, 250);
+}
+/*變成手機的時候，隱藏電腦的*/
+@media(max-width:720px){
+    nav.computer{
+        display: none;
+    }
+}
+.computer_grid{
+    display: grid;
+    grid-template-rows: auto auto;
+    height: 100%;
+    align-content: space-between;
+    justify-items: center;
+    overflow-y: auto;/*卷軸*/
+}
+/*電腦的nav*/
+.top{
+    display: grid;
+    grid-template-rows: 80px auto;
+    justify-items: center;
+    grid-row-gap: 30px;
+}
+.logo{
+    width: 35px;
+    padding: 20px;
+    margin-top: 10px;
+}
+.icon_grid{
+    height: 450px;
+    display: grid;
+    grid-template-rows: auto auto auto auto auto auto;
+    justify-content: center;
+}
+.icon-img{
+    width: 30px;
+}
+
+.icon-img.mav-icon{
+    width: 30px;
+    padding: 15px 30px;
+}
+.icon-img.choose{
+    border-right:3px solid rgb(29,191,123);
+}
+.userimg{
+    border-radius: 50%;
+}
+/*.user_grid{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}*/
+
+
+
+/*手機的nav*/
+.logo_grid-phone{
+    padding: 10px;
+}
+nav.phone{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    background-color: rgb(250, 250, 250);
+    display: block;
+    padding: 10px 0;
+}
+/*變成手機的時候，隱藏電腦的*/
+@media(min-width:720px){
+    nav.phone{
+        display: none;
+    }
+}
+.logo_grid-phone{
+    justify-content: center;
+    vertical-align: middle;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
+}
+.logo-phone{
+    height: 100%;
+    width: 40px;
+}
+
+
+
+h1{
+    
+    font-size: 20pt;
+}
+
+h2{
+    font-size: 18pt;
+    padding: 0;
+    margin: 0 0 60px 0;
+    color: #666;
+    font-weight: lighter;
+}
+h3{
+    font-size: 12pt;
+    padding: 0;
+    margin: 0;
+    font-weight: lighter;
+}
+h4{
+    font-size: 12pt;
+    padding: 0;
+    margin: 0;
+}
+.wrapper{
+    padding-left: 100px;
+    display: grid;
+    grid-template-columns: auto 300px;
+    height: 100%;
+}
+/*變成手機的時候，隱藏電腦的*/
+@media(max-width:720px){
+    .wrapper{
+        padding-left: 0;
+        display: grid;
+        grid-template-columns: auto;
+    }
+}
+/*中間的部分*/
+.main-view{
+    background-color: rgb(255, 255, 255);
+    padding-top: 35px;
+    margin: 0 40px;
+}
+/*變成手機的時候*/
+@media(max-width:720px){
+    .main-view{
+        margin: 60px 0;
+    }
+}
+/*右邊的部分*/
+.side-view{
+    background-color: rgb(252, 255, 253);
+    border-left: 1px solid rgb(227, 227, 227);
+    padding-top: 35px;
+    padding-left: 20px;
+}
+/*變成手機的時候，隱藏電腦的*/
+@media(max-width:720px){
+    .side-view{
+        display: none;
+    }
+}
+
+.container{
+    margin: 0 auto;
+    padding:0 15px;
+    max-width: 1200px;
+}
+
+/*麵包屑*/
+.breadcrumb{
+    padding-bottom: 10px;
+}
+.breadcrumb > .item::after{
+    content: '/';
+    margin: 0 5px 0 10px;
+    opacity: 0.3;
+}
+.breadcrumb >.item:last-child::after{
+    content: none;
+}
+.breadcrumb > .item{
+    color: #666;
+}
+.breadcrumb > .item.active{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+/*標題欄位*/
+.title_grid{
+    display: grid;
+    grid-template-columns:500px auto;
+    align-items: center;
+}/*變成手機的時候*/
+@media(max-width:720px){
+    .title_grid{
+        display: block;
+        justify-content: start;
+    }
+}
+.CHAPTER_grid{
+    display: grid;
+    grid-template-columns: 115px auto;
+    justify-content: end;
+    align-items: center;
+}/*變成手機的時候*/
+@media(max-width:720px){
+    .CHAPTER_grid{
+        justify-content: start;
+        margin: 20px 0;
+    }
+}
+.CHAPTER{
+    font-size: 10pt;
+    font-weight: bold;
+    color: rgb(163, 163, 163);
+}
+.left_button{
+    border: 1px #ccc solid;
+    border-right: 0px;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    width: 30px;
+    color: #666;
+    text-align: right;
+    padding-top: 3px;
+}
+.right_button{
+    border: 1px rgb(29,191,123) solid;
+    border-right: 0;
+    background-color: rgb(29,191,123);
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    width: 30px;
+    color: rgb(255, 255, 255);
+    padding-top: 3px;
+}
+.button_grid{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+/*變成手機的時候*/
+@media(max-width:720px){
+    .button_grid{
+        justify-content: start;
+    }
+}
+
+.photo{
+    width: 100%;
+    border-radius: 3px;
+    margin-top: 50px;
+}
+
+/*三個區域的選單*/
+.tabs{
+    font-size: 14pt;
+    margin-top: 30px;
+}
+.tabs >.item{
+    display: inline-block;
+    margin: 10px;
+}
+.tabs >.item:first-child{
+    display: inline-block;
+    margin-left:0;
+}
+.tabs >.item:hover{
+    color: green;
+}
+/*有被選到的話有底線*/
+.tabs >.item.active{
+    border-bottom: 3px solid green;
+}
+/*沒被選到的話是灰色*/
+.tabs >.item.nochoice{
+    color: rgb(168, 167, 167);
+}
+
+.under_grid{
+    display: grid;
+    grid-template-columns: 60% auto;
+    grid-column-gap: 40px;
+    margin-bottom: 70px;
+}
+/*變成手機的時候往下排*/
+@media(max-width:720px){
+    .under_grid{
+        display: grid;
+        grid-template-columns: auto;
+    }
+}
+.text{
+    margin-top: 30px;
+    margin-bottom: 40px;
+    line-height: 150%;
+    display: grid;
+    grid-template-rows: auto auto;
+}
+/*變成手機的時候往下排*/
+@media(max-width:720px){
+    .text{
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+}
+
+
+.AboutInstructor{
+    padding: 30px 25px 25px 25px;
+    background-color: rgb(248, 249, 254);
+}
+.Instructor_grid{
+    display: grid;
+    grid-template-columns: 50px auto;
+    align-items: center;
+    margin-top: 20px;
+}
+.Instructor_grid-img{
+    width: 100%;
+    border-radius: 50%;
+}
+.Instructor_grid-text{
+    margin-top: 20px;
+    line-height: 150%;
+    font-size: 14px;
+}
+.Instructor-text{
+    margin-left: 20px;
+}
+.Instructor-text-1{
+    padding: 5px 0;
+    font-weight: bold;
+}
+.Instructor-text-2{
+    padding: 5px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+/*右邊的部分*/
+.COMPLETED{
+    display: grid;
+    grid-template-columns: 240px auto;
+    align-items: center;
+    margin-top: 20px;
+}
+/*進度條*/
+.progress-bar{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin-right:15px;
+    grid-column-gap:2px ;
+}
+.progress-bar > .item{
+    height: 5px;
+    background-color:  rgb(207,242,227);
+}
+.progress-bar > .item.completed{
+    height: 5px;
+    background-color: rgb(29,191,123);
+}
+
+/*五個進度*/
+.circle.green{
+    height: 100%;
+    border: solid rgb(29,191,123) 3px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 10pt;
+}
+.circle.grey{
+    height: 100%;
+    border: solid #ccc 3px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 10pt;
+}
+.trisection > .trisection-option_ing{
+    color: rgb(29,191,123);
+    font-weight:600;
+}
+.trisection > .trisection-option_lock{
+    color: rgb(0, 0, 0);
+    font-weight:600;
+}
+.trisection > .trisection-option_finish{
+    color: rgb(164, 164, 164);
+}
+h5{
+    font-size: 10pt;
+    color: #666;
+    margin: 0;
+    padding: 0;
+    font-weight: lighter;
+    line-height: 150%;
+}
+.trophy{
+    width: 25px;
+}
+
+.trisection_grid{
+    margin-top: 30px;
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    grid-row-gap: 5px;
+}
+.trisection{
+    display: grid;
+    grid-template-columns: 30px auto 30px;
+    align-items: center;
+    margin: 10px 0;
+    grid-column-gap: 10px;
+}
+
+
+
+.material-symbols-outlined.chevron_right{
+    color: #ccc;
+}
+
+
+/*像貼文的地方*/
+.Discussion{
+    margin-top: 35px;
+}
+.post{
+    border-bottom:1px solid rgb(227, 227, 227);
+}
+.post_grid{
+    display: grid;
+    grid-template-columns:50px auto;
+    margin: 15px 0;
+    align-items: center;
+}
+.post:last-child{
+    border-bottom:none;
+}
+.post-img{
+    border-radius: 50%;
+    width: 30px;
+    padding: 5px;
+}
+.post-information{
+    display: grid;
+    grid-template-columns:95px auto;
+}
+.posting-location{
+    font-size: 10pt;
+    color: #666;
+    margin: 2px 0;
+    font-weight: lighter;
+}
+.posting-time{
+    font-size: 10pt;
+    color: blue;
+    margin: 2px 0;
+    font-weight: lighter;
+}
+
+.sharearrow_grid{
+    display: grid;
+    grid-template-columns:30px auto;
+    align-items: center;
+    margin: 20px 0;
+}
+.sharearrow{
+    width: 20px;
+}
+
+.music_grid{
+    display: grid;
+    grid-template-columns:53px auto 55px;
+    border:1px solid rgb(227, 227, 227);
+    border-radius: 5px;
+    align-items: center;
+}
+.music-img{
+    width: 30px;
+    padding: 10px 13px;
+}
+/*音樂裡的線*/
+.line{
+    position: relative;
+}
+.grey-line{
+    width: 100%;
+    height: 1px;
+    border-top: solid #ccc 1px;
+}
+.green-line{
+    width: 30%;
+    height: 1px;
+    border-top: solid rgb(29,191,123) 2px;
+    position: absolute;/*可以移動*/
+    top: 0px;
+}
+.grey-ball{
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    background-color: rgb(29,191,123);
+    position: absolute;/*可以移動*/
+    top: -4px;
+    left: 45px;
+}
+.time{
+    padding: 5px;
+}
+
+.Replypost{
+    margin-left: 10px ;
+    border-left:1px solid rgb(227, 227, 227);
+    padding-left: 20px;
+}
